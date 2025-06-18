@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eposyandu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-rKk/RU4LR0rMD+J2XWoZHcGbeEew9UZdt7fN/knNq5clR5JNQFUnP7uU6tHdmjPW" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .schedule-container {
+            width: 90%;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .event-card {
+            background: linear-gradient(135deg, #c7f5ff, #e7f9ff);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 30px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .event-day {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background: #0b3f53;
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: fit-content;
+            text-align: left;
+            margin-bottom: 10px;
+
+        }
+
+        .event-name {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .event-place {
+            font-size: 23px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .confirm-button {
+            margin-top: 30px;
+            padding: 8px;
+            background: #abacab;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .confirm-button:hover {
+            background: #0b3f53;
+        }
+
+
+    footer {
+      position: relative;
+      background-color: #EAC4D5;
+      padding: 20px;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Memastikan semua elemen sejajar vertikal */
+      flex-wrap: wrap; /* Agar elemen tidak melebar jika layar kecil */
+      margin-top: 30px;
+      width: 100%;
+  }
+  
+  /* Jika ingin logo berada di kiri */
+  .logo {
+      display: flex;
+      align-items: center;
+      flex: 1; /* Biarkan mengambil ruang yang tersedia */
+  }
+  
+  
+  /* Agar ikon media sosial tetap rapi */
+  .logo-medsos {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end; /* Ikon ke kanan */
+      flex: 1; /* Agar fleksibel menyesuaikan ruang */
+  }
+  
+  /* Pastikan ukuran ikon media sosial */
+  .logo-medsos img {
+      width: 50px;
+      height: 50px;
+  }
+  
+  /* Responsif untuk layar kecil */
+  @media (max-width: 768px) {
+      footer {
+          flex-direction: column;
+          text-align: center;
+      }
+  
+      .logo, .logo-medsos {
+          justify-content: center;
+          flex: none;
+      }
+  
+      .logo-medsos {
+          margin-top: 10px;
+      }
+
+      .form-detail input,
+.form-detail textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    background: #0b3f53;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background: #06323f;
+}
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="eposyandu" width="60%" height="60%"> 
+        </div>
+        <nav class="navbar">
+            <a href="index.html">BERANDA</a>
+            <a href="./jadwal.html">JADWAL</a>
+            <a href="keluhan.html">PENGADUAN</a>
+            <a href="login.html">LOGIN</a>
+        </nav>
+    </header>
+    <div class="gambar">
+        <img src="kanan.png" id="imgkanan2" width="150px" height="auto">
+        <img src="kiri.png" id="imgkiri2" width="150px" height="auto">
+    </div>
+    <div id="jadwal" class="container">
+        <h1 class="kegiatan">Jadwal Kegiatan Bulan Juni</h1>
+        <div class="schedule-container">
+            <div class="event-card">
+                <div class="event-day">Senin, 3 Juni 2025</div>
+                <div class="event-name">Penimbangan Balita</div>
+                <div class="event-place">Balai RW 08</div>
+               
+                <form class="konfirmasi-form" action="konfirmasi.php" method="post">
+    <input type="hidden" name="event" value="Penimbangan Balita">
+    <button class="confirm-button" type="button">Konfirmasi Kehadiran</button>
+
+    <div class="form-detail" style="display: none; margin-top: 15px;">
+        <input type="text" name="nama" placeholder="Nama" required><br><br>
+        <input type="date" name="tanggallahir" placeholder="Tanggal Lahir" required><br><br>
+        <textarea name="alamat" placeholder="Alamat" required></textarea><br><br>
+        <button class="submit-button" type="submit">Kirim</button>
+    </div>
+</form>
+            </div>
+            <div class="event-card">
+                <div class="event-day">Rabu, 12 Juni 2025</div>
+                <div class="event-name">Imunisai</div>
+                <div class="event-place">Balai RW 08</div>
+
+               <form class="konfirmasi-form" action="konfirmasi.php" method="post">
+    <input type="hidden" name="event" value="imunisasi">
+    <button class="confirm-button" type="button">Konfirmasi Kehadiran</button>
+
+    <div class="form-detail" style="display: none; margin-top: 15px;">
+        <input type="text" name="nama" placeholder="Nama" required><br><br>
+        <input type="date" name="tanggallahir" placeholder="Tanggal Lahir" required><br><br>
+        <textarea name="alamat" placeholder="Alamat" required></textarea><br><br>
+        <button class="submit-button" type="submit">Kirim</button>
+    </div>
+</form>
+            </div>
+            <div class="event-card">
+                <div class="event-day">Jumat, 21 Juni 2025</div>
+                <div class="event-name">Konsultasi Gizi & Kesehatan Ibu</div>
+                <div class="event-place">Balai RW 08</div>
+              
+                <form class="konfirmasi-form" action="konfirmasi.php" method="post">
+    <input type="hidden" name="event" value="Konsultasigizi">
+    <button class="confirm-button" type="button">Konfirmasi Kehadiran</button>
+
+    <div class="form-detail" style="display: none; margin-top: 15px;">
+        <input type="text" name="nama" placeholder="Nama" required><br><br>
+        <input type="date" name="tanggallahir" placeholder="Tanggal Lahir" required><br><br>
+        <textarea name="alamat" placeholder="Alamat" required></textarea><br><br>
+        <button class="submit-button" type="submit">Kirim</button>
+    </div>
+</form>
+            </div>
+        </div>
+    </div>
+     
+
+    <footer>
+        <div class="logo">
+            <img src="logo.png" alt="Posyandu" width="60%" height="60%"> 
+        </div>
+        <div class="logo-medsos">
+            <img src="ig.png" alt="Instagram" width="60px" height="60px">
+            <img src="facebook.png" alt="Facebook" width="60px" height="60px">
+            <img src="twiter.png" alt="Twitter" width="60px" height="60px">
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const forms = document.querySelectorAll('.konfirmasi-form');
+
+    forms.forEach(form => {
+        const confirmBtn = form.querySelector('.confirm-button');
+        const formDetail = form.querySelector('.form-detail');
+        const eventName = form.querySelector('input[name="event"]').value;
+
+        // Jika sudah dikonfirmasi, disable tombol
+        if (localStorage.getItem(eventName)) {
+            confirmBtn.disabled = true;
+            confirmBtn.textContent = "Sudah Dikonfirmasi";
+        }
+
+        // Tampilkan/hidden form saat tombol diklik
+        confirmBtn.addEventListener('click', function () {
+            formDetail.style.display = formDetail.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Saat form dikirim, simpan konfirmasi ke localStorage
+        form.addEventListener('submit', function () {
+            localStorage.setItem(eventName, "confirmed");
+            confirmBtn.disabled = true;
+            confirmBtn.textContent = "Sudah Dikonfirmasi";
+        });
+    });
+});
+</script>
+    
+</body>
+</html>

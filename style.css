@@ -1,0 +1,393 @@
+@font-face {
+  font-family: Bold;
+  src: url(fonts/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Medium;
+  src: url(../assets/fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: Regular;
+  src: url(../assets/fonts/Montserrat-Regular.ttf);
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      background-color: #F0F8F4;
+      min-height: 100vh;
+  
+    }
+    
+    header {
+      background-color: #EAC4D5;
+      color: #fff;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1000; /* Pastikan z-index agar di atas elemen lain */
+      top: 0;
+    }
+    .logo {
+      position:absolute;
+      display: flex;
+      left: 30px;
+      
+    }
+
+    h1{
+      color: black;
+      font-size: 60px;
+      font-family: Montserrat;
+    }
+
+    p{
+      color: black;
+      font-size: 30px;
+    }
+
+    .navbar {
+      position: fixed;
+      right: 50px;
+      display: flex;
+      padding: 20px;
+      gap: 60px;
+    
+    }
+
+    .navbar a {
+      color: #5F1419;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block;
+      position: relative;
+      transition: background 0.3s ease;
+      font-family: Bold;
+  }
+  .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+  }
+  .navbar a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+  }
+  .navbar a:hover::after {
+      transform: scaleX(1);
+  }
+    #beranda {
+      padding: 90px;
+      width: 900px; 
+      height: auto; 
+      max-width: 80%; 
+      text-align: justify; 
+      word-wrap: break-word; 
+  }
+
+    .imgberanda{
+      position: absolute;
+      right: 0px; 
+      top: 45px;
+      height: auto;
+    }
+
+  .buttonberanda {
+      background-color: #1E6B72;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+        display: inline-block;
+        border: none;
+        padding: 15px 32px;
+        font-size: 25px;
+        border-radius: 12px;
+      }
+
+      .buttonberanda:hover{
+        background-color: #D5EDE0;
+        color: black;
+      }
+      #tujuan{
+        padding-top: 30px;
+        padding-left: 90px;
+      }
+
+      .imgtujuan{
+        padding top : 40px;
+        display: block;
+        margin: auto;
+      }
+      #layanan {
+        display: flex;
+        flex-direction: column; /* Susun elemen ke bawah */
+        align-items: flex-end; /* Pastikan teks rata kanan */
+        text-align: right;
+        padding: 20px;
+    }
+    
+    .layanan {
+        max-width: 500px; /* Batasi lebar agar teks turun */
+        white-space: normal; 
+       padding-right: 50px;
+  
+    
+    }
+    
+    .imglayanan {
+      padding top : 40px;
+      display: block;
+      margin: auto;
+
+
+    }
+
+    footer {
+      position: absolute;
+      background-color: #EAC4D5;
+      padding: 20px;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Memastikan semua elemen sejajar vertikal */
+      flex-wrap: wrap; /* Agar elemen tidak melebar jika layar kecil */
+      margin-top: 30px;
+      width: 100%;
+  }
+  
+  /* Jika ingin logo berada di kiri */
+  .logo {
+      display: flex;
+      align-items: center;
+      flex: 1; /* Biarkan mengambil ruang yang tersedia */
+  }
+  
+  
+  /* Agar ikon media sosial tetap rapi */
+  .logo-medsos {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end; /* Ikon ke kanan */
+      flex: 1; /* Agar fleksibel menyesuaikan ruang */
+  }
+  
+  /* Pastikan ukuran ikon media sosial */
+  .logo-medsos img {
+      width: 50px;
+      height: 50px;
+  }
+  
+  /* Responsif untuk layar kecil */
+  @media (max-width: 768px) {
+      footer {
+          flex-direction: column;
+          text-align: center;
+      }
+  
+      .logo, .logo-medsos {
+          justify-content: center;
+          flex: none;
+      }
+  
+      .logo-medsos {
+          margin-top: 10px;
+      }
+  }
+
+  #jadwal {
+    padding-top: 50px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .kegiatan {
+    font-size: 50px;
+  }
+  table {
+    width: 800px;
+    height: 600px;
+    border-collapse: collapse;
+    margin: 10px auto;
+    align-items: center;
+}
+
+th, td {
+    border: 2px solid #5F1419;
+    padding: 40px 60px;
+    text-align: center;
+}
+
+th {
+    background-color: #DBFCEA;
+    color: black;
+}
+
+td {
+    background-color: #F0F8F4;
+    height: 50px;
+}
+
+.note {
+    font-size: 20px;
+    color: black;
+    margin: 10px auto;
+    padding-top: 10px;
+}
+.header {
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  margin-left: 50px;
+  font-size: 25px;
+  margin-top: 50px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.contact img {
+  width: 40px; /* Sesuaikan ukuran ikon */
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #e5d4ff; /* Warna ungu muda sesuai gambar */
+  padding: 10px;
+}
+
+.contact p {
+  font-size: 20px;
+  color: black;
+  margin: 0;
+}
+
+.confirm-box {
+  justify-content: center;
+  gap: 10px;
+}
+.bubble {
+  position: fixed;
+  bottom: 50px; /* Jarak dari footer */
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Pastikan muncul di atas footer */
+}
+.pengaduan {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    height: 500px;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 25%;
+    margin-bottom: 150px;
+    z-index: 10;
+}
+#laporan {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #c0c0c0;
+}
+Agar gambar **berada di pojok kanan dan pojok kiri serta berada di posisi paling bawah** dari elemen lain, kamu perlu:  
+
+✅ **Menggunakan `position: absolute;` untuk mengunci posisi gambar di dalam `.gambar`**  
+✅ **Menempatkan `.gambar` sebagai `position: relative;` agar gambar tetap dalam batas div**  
+✅ **Menggunakan `bottom: 0;` agar gambar ada di bawah elemen lainnya**  
+✅ **Menggunakan `left: 0;` untuk gambar kiri dan `right: 0;` untuk gambar kanan**  
+
+---
+
+### **Kode CSS yang Diperbaiki**
+```css
+.gambar {
+  position: relative; /* Agar posisi absolute bekerja dalam elemen ini */
+  width: 100%; /* Lebar penuh */
+  height: 100px; /* Sesuaikan tinggi */
+  z-index: 5; /* Pastikan berada di bawah elemen lain */
+}
+
+#imgkanan {
+  position: absolute;
+  right: 0; /* Pojok kanan */
+  bottom: 0; /* Paling bawah */
+}
+
+#imgkiri {
+  position: absolute;
+  left: 0; /* Pojok kiri */
+  bottom: -400px; /* Paling bawah */
+}
+
+#imgkiri2 {
+  position: absolute;
+  left: 0; /* Pojok kiri */
+  bottom: -150px; /* Paling bawah */
+}
+
+#imgkanan2 {
+  position: absolute;
+  right: 0; /* Pojok kanan */
+  bottom: 100px; /* Paling bawah */
+}
+
+#imglapor{
+  position: absolute;
+  right: 250px;
+  bottom: 170px;
+}
+
+

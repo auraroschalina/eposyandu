@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eposyandu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-rKk/RU4LR0rMD+J2XWoZHcGbeEew9UZdt7fN/knNq5clR5JNQFUnP7uU6tHdmjPW" crossorigin="anonymous">
+    <script src=""></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+                <img src="logo.png" alt="eposyandu" width=60%; height=60%> 
+        </div>
+        <div class="navbar">
+            <a href="index.html" onclick="showPage('beranda')">BERANDA</a>
+            <a href="./jadwal.html" onclick="showPage('jadwal')">JADWAL</a>
+            <a href="keluhan.html" onclick="showPage('pengaduan')">PENGADUAN</a>
+            <a href="login.html" onclick="showPage('login')">LOGIN</a>
+        </div>
+    </header>
+    
+        <div id="beranda" class="container">
+            <h1>e-Posyandu</h1>
+            <p>e-Posyandu merupakan sistem informasi berbasis web yang dirancang untuk mendigitalisasi proses pelayanan dan pencatatan kegiatan Posyandu (Pos Pelayanan Terpadu), khususnya dalam aspek kesehatan ibu dan anak di tingkat masyarakat.</p>
+            <img src="beranda.png" class="imgberanda">
+            <a href="https://ayosehat.kemkes.go.id/posyandu-semakin-siap-melayani-masyarakat-secara-menyuluh-" class="buttonberanda" target="_blank">Baca Artikel</a>
+        </div>
+        <div id="tujuan" class="container">
+            <h1>Tujuan Posyandu</h1>
+            <img src="tujuan.png" class="imgtujuan">
+        </div>
+        <div id="layanan" class="container">
+            <h1 class="layanan">Layanan Yang Disediakan</h1>
+            <img src="layanan.png" class="imglayanan" width="850px">
+        </div>
+
+        <footer>
+            <div class="logo">
+                <img src="logo.png" alt="Posyandu" width=60%; height=60%> 
+            </div>
+                <div class="logo-medsos">
+                    <img src="ig.png" alt="Instagram" width="60px" height="60px">
+                    <img src="facebook.png" alt="Twitter" width="60px" height="60px">
+                    <img src="twiter.png" alt="Facebook" width="60px" height="60px">
+                </div>
+            </div>
+        </footer>
+            
+    
+        <script>
+            function showPage(pageId) {
+                document.getElementById("beranda").style.display = "none";
+                document.getElementById("pengaduan").style.display = "none";
+                document.getElementById("login").style.display = "none";
+                document.getElementById("jadwal").style.display = "none";
+                document.getElementById(pageId).style.display = "block";
+            }
+    
+            document.getElementById("reportForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                let name = document.getElementById("name").value || "Anonim";
+                let location = document.getElementById("location").value;
+                let description = document.getElementById("description").value;
+                
+                let reportItem = document.createElement("div");
+                reportItem.classList.add("report-item");
+                reportItem.innerHTML = `<strong>${name}</strong> <p>Lokasi: ${location}</p> <p>${description}</p>`;
+                
+                document.getElementById("reportList").appendChild(reportItem);
+                document.getElementById("reportForm").reset();
+            });
+        </script>
+    
+        
+</body>
+</html>

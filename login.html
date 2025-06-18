@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Desktop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fef9ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .container {
+            background: #F0F8F4;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            width: 800px; 
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .decor-left, .decor-right {
+            position: absolute;
+            top: -50px;
+            width: 250px;
+            height: auto;
+            opacity: 0.9;
+        }
+        .decor-left {
+            left: -40px;
+        }
+        .decor-right {
+            right: -40px;
+        }
+        h2 {
+            color: #5F1419;
+            font-size: 48px;
+            font-weight: bold;
+            margin-top: 50px;
+            margin-bottom: 5px;
+            font-family: League Spartan;
+        }
+        p {
+            color: black;
+            font-size: 20px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            font-family: League Spartan;
+        }
+        .input-container {
+            width: 80%;
+            position: relative;
+            margin: 15px auto;
+        }
+        .input-container input {
+            width: 100%;
+            padding: 14px;
+            padding-left: 55px;
+            border: 2px solid #95B8D1;
+            background: white;
+            border-radius: 25px;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        .input-container img {
+            position: absolute;
+            padding-left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+        }
+        button {
+            width: 25%;
+            padding: 14px;
+            background-color: #EAC4D5;
+            color: #5F1419;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background 0.3s ease-in-out;
+        }
+        button:hover {
+            background-color: #95B8D1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Dekorasi Kiri & Kanan -->
+        <img src="manikk.png" class="decor-left" alt="Decor Left">
+        <img src="manikk.png" class="decor-right" alt="Decor Right">
+
+        <h2>SELAMAT DATANG</h2>
+        <p>Jika Anda Admin, Anda Dapat Masuk!</p>
+        
+        <form action="register.php" method="POST">
+            <div class="input-container">
+                <img src="user2.png"User>
+                <input type="text" name="nama_pengguna" placeholder="Nama Pengguna" required>
+            </div>
+            <div class="input-container">
+                <img src="pw.png" alt="Password">
+                <input type="password" name="kata_sandi" placeholder="Kata Sandi" required>
+            </div>
+            <button type="submit">Masuk</button>
+        </form>
+    </div>
+</body>
+</html>
